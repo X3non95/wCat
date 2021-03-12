@@ -1,0 +1,15 @@
+let fs = require('fs');
+function numbering(dirpath){
+ fileBuffer =  fs.readFileSync(dirpath);
+ to_string = fileBuffer.toString();
+ split_lines = to_string.split("\n");
+ let i = 0;
+ while (i< split_lines.length){
+  console.log(i+1,split_lines[i]);
+  i++;
+ }
+}
+
+module.exports={
+ numberFn: numbering
+};
